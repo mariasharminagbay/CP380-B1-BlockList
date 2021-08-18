@@ -24,7 +24,7 @@ namespace TestBlock
             var dt = new System.DateTime(0);
             var block = new Block(dt, "", new List<Payload>());
             block.Mine(2);
-            Assert.AreEqual(4302, block.Nonce);
+            Assert.AreEqual(2340, block.Nonce);
         }
 
         [TestMethod]
@@ -52,7 +52,7 @@ namespace TestBlock
             var previousHash = "wPdk2JeNwKVj6W81T9QZsJrUg6RR-E5kS-Gjo33lm5I";
             var block = new Block(dt, previousHash, new List<Payload>());
             block.Mine(2);
-            Assert.AreEqual(5864, block.Nonce);
+            Assert.AreEqual(2864, block.Nonce);
             Assert.AreEqual("CCsSo2Mav34YLFkeGObUEqxr3VSTkOmRqAQbYo1AYhU", block.Hash);
         }
 
